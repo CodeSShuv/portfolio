@@ -1,5 +1,5 @@
 import { useState } from "react";
-type form = {firstName:String, email:String, message:String}
+type form = {firstName:string, email:string, message:string}
 const Contact = () => {
   const [formData, setFormData] = useState<form>({ firstName: "", email: "", message: "" });
 
