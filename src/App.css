@@ -1,0 +1,38 @@
+@import "tailwindcss";
+/* @layer components{
+    .common{
+        @apply 
+    }
+} */
+body{
+    padding: 7rem;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* background-color: #242424; */
+background-color: #242424;
+}
+main{
+    background-color: #242424;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.projects {
+    background-color: #242424;
+}
+.toggleBtnContainer,.card-container{
+    background-color: #242424;
+}
+.about-me{
+    color:#343a40;
+    background-color:white ;
+}
+#cardImg{
+    width: 60%;
+    aspect-ratio: 3/2 !important;
+    object-fit: contain;
+
+}
+
