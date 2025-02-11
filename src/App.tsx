@@ -10,7 +10,7 @@ import Skills from './Components/Skills';
 import Contact from './Components/Contact';
 const App = () => {
 const [toggler,setToggler] = useState<boolean>(true)
-const toggle = (e:any)=>{
+const toggle = ()=>{
 
  if(toggler){
   setToggler(false);
