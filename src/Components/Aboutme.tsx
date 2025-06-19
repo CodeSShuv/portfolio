@@ -4,10 +4,18 @@ const Aboutme = () => {
     return (
         <>
             <section className='about-me flex flex-col items-start'>
-                <h2 className='text-3xl p-4 text-black'>Know about me</h2>
+                <h2 className='text-3xl p-4 text-black vt323-regular'>Who am I? </h2>
                 <div className='p-5'>
-                    <p className='text-black text-1xl'>
-                    I'm Shuvam Gautam, a self-taught programmer and a BCA student currently in my 3rd semester. I specialize in web development with React, Node.js, and MongoDB, along with DSA in Java. I love solving problems, building intuitive websites, and constantly learning new tech. Currently exploring competitive coding as a hobby because who doesn't love a good challenge?
+                    <p className='text-black text-1xl vt323-regular'>
+                        <ul>
+                            <li />I'm Shuvam Gautam, a self-taught programmer and a BCA student in my 3rd semester.
+
+                            <li />I specialize in full-stack web development using React, Node.js, MongoDB, and TypeScript.
+
+                            <li />I enjoy solving problems and building intuitive, user-friendly websites.
+
+                            <li />I'm passionate about continuously learning new technologies and improving my skills.
+                        </ul>
                     </p>
                 </div>
 

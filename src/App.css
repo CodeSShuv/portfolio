@@ -1,9 +1,16 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /* @layer components{
     .common{
         @apply 
     }
 } */
+ .vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body{
     padding: 7rem;
     overflow-x: hidden;
@@ -19,6 +26,11 @@ main{
     background-color: #242424;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.headerMain{
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); */
+}
+
 .projects {
     background-color: #242424;
 }
@@ -28,6 +40,9 @@ main{
 .about-me{
     color:#343a40;
     background-color:white ;
+    /* clip-path: polygon(0 0, 91% 20%, 100% 100%, 0 100%); */
+   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+   height: 70vh;
 }
 #cardImg{
     width: 60%;

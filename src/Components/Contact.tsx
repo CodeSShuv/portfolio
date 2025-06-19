@@ -1,13 +1,13 @@
-import { useState } from "react";
-type form = {firstName:string, email:string, message:string}
-const Contact = () => {
-  const [formData, setFormData] = useState<form>({ firstName: "", email: "", message: "" });
+import React, { JSX, useState } from "react";
+interface Form {firstName:string, email:string, message:string}
+const Contact = ():JSX.Element => {
+  const [formData, setFormData] = useState<Form>({ firstName: "", email: "", message: "" });
 
-  const handleChange = (e:any) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form Submitted", formData);
   };
