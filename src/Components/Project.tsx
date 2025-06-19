@@ -5,7 +5,8 @@ const Project = () => {
   return (
     <> 
     
-    <section className='projects flex justify-center items-center w-full'>
+    <section className='projects flex justify-center items-center w-full'
+    id='projectContainer'>
 
         <div className="card-container flex justify-evenly items-center gap-8 p-6 w-full  flex-wrap">
             <Card title='Portfolio Site' needBtn={true} />

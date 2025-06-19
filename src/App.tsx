@@ -10,7 +10,7 @@ import Project from './Components/Project';
 import Skills from './Components/Skills';
 
 const App = () => {
-const [toggler,setToggler] = useState<boolean>(true)
+const [toggler,setToggler] = useState<boolean>(true);
 const toggle = ()=>{
 
  if(toggler){
@@ -60,8 +60,8 @@ const toggle = ()=>{
       </header>
       <Aboutme/>
       <div className="toggleBtnContainer p-3 flex justify-center items-center gap-2 bg-yellow-50 w-full">
-        <button className={`btn `+`${toggler?"btn-secondary":"btn-light"}`} disabled={toggler} name='project' onClick={toggle}>Projects</button>
-        <button className={`btn `+`${!toggler?"btn-secondary":"btn-light"}`} disabled={!toggler}name='skill'onClick={toggle}>Skills</button>
+        <button className={`btn `+`${!toggler?"btn-secondary":"btn-light"}`} disabled={!toggler} name='project' onClick={toggle}>Projects</button>
+        <button className={`btn `+`${toggler?"btn-secondary":"btn-light"}`} disabled={toggler}name='skill'onClick={toggle}>Skills</button>
       </div>
      
       {toggler?<Skills/>:<Project/>}

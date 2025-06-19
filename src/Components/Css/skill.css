@@ -1,0 +1,10 @@
+@import url("../../App.css");
+@media screen and (width<1000px){
+    .card-container{
+        flex-flow: column !important;
+    }
+    .projectSectioHeading{
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

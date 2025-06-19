@@ -1,11 +1,11 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); */
 /* @layer components{
     .common{
         @apply 
     }
 } */
- .vt323-regular {
+.vt323-regular {
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
@@ -26,13 +26,12 @@ main{
     background-color: #242424;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.headerMain{
 
-    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); */
-}
 
 .projects {
     background-color: #242424;
+    flex-wrap: wrap;
+    
 }
 .toggleBtnContainer,.card-container{
     background-color: #242424;
@@ -50,4 +49,24 @@ main{
     object-fit: contain;
 
 }
-
+.charList{
+    margin-top: -2rem;
+    /* list-style-type: disc; */
+}
+@media screen and (width<900px) {
+    
+    .about-me{
+        width: 50%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 88% 100%, 88% 75%, 0% 75%);
+    }
+    .charList{
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+    .charList li{
+        list-style-type: disc;
+        word-wrap: break-word;
+        line-break:strict;
+        font-size: .1rem;
+    }
+}

@@ -8,7 +8,7 @@ import expressImage from "../assets/photos/Expressjsn.png"
 import mongooseImage from "../assets/photos/mongoose.png"
 import nodeImage from "../assets/photos/Nodejs.png"
 import mongodbImage from "../assets/photos/mongodbn.png"
-// import 
+import './Css/skill.css'
 const Skills = () => {
   return (
     <section className='skill w-full'>
