@@ -8,7 +8,7 @@ import "./App.css";
 import Aboutme from './Components/Aboutme';
 import Project from './Components/Project';
 import Skills from './Components/Skills';
-import Contact from './Components/Contact';
+
 const App = () => {
 const [toggler,setToggler] = useState<boolean>(true)
 const toggle = ()=>{
