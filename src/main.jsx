@@ -8,7 +8,7 @@ import NameState from "./context/states/NameState"
 
 createRoot(document.getElementById('root')).render(
   <NameState>
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename="/portfolio/">
       <App />
     </BrowserRouter>
   </NameState>,
