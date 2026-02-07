@@ -1,0 +1,32 @@
+.custom-list {
+  list-style-type: none;
+  font-size: 1.3rem;
+  padding-left: 0;
+
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 2rem;
+  ;
+}
+
+.custom-list li::before {
+  content: "$ ";
+  color: #4F46E5;
+  font-weight: bold;
+  margin-right: 8px;
+  display: inline;
+  position: absolute;
+  left: 1rem;
+  top: .2rem;
+}
+
+input {
+  background-color: #272822;
+  width: 80rem;
+  font-size: 1.3rem;
+  display: inline-block;
+  border: none;
+  outline: none;
+}

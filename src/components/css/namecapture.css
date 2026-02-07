@@ -1,0 +1,17 @@
+.name-capture-box {
+  background-color: #272822;
+  width: 100%;
+}
+
+.name-capture-box input {
+  background-color: #272822;
+  width: 80rem;
+  font-size: 1.3rem;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.name-capture-box input:hover {
+  outline: none;
+}

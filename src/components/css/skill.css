@@ -1,0 +1,15 @@
+.logo-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo-container img {
+  width: 10%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.skills-container>div {
+  border-bottom: 1px solid gray;
+  padding: 1rem, 0, 1rem, 0;
+}
