@@ -5,6 +5,8 @@ import { useState } from "react";
 import Window from "../components/Window.jsx"
 import About from "../components/About.jsx";
 import Skill from "../components/Skill.jsx";
+import Project from "../components/Project.jsx";
+import Contact from "../components/Contact.jsx";
 const NavigationPage = () => {
   const { visitorName, setVisitorName } = useContext(visitorNameContext);
 
@@ -41,7 +43,10 @@ const NavigationPage = () => {
           <About />
         </Window> : (selected === "Skills" ? <Window closeWindow={closeWindow} title={"Skills"}>
           <Skill />
-        </Window> : (selected === "Projects" ? <Window closeWindow={closeWindow} title={"Projects"}></Window> : (selected === "Contact" ? < Window closeWindow={closeWindow} title={"Contact me"}></Window> : "")))}
+        </Window> : (selected === "Projects" ? <Window closeWindow={closeWindow} title={"Projects"}>
+          <Project />
+        </Window> : (selected === "Contact" ? < Window closeWindow={closeWindow} title={"Contact me"}>
+          <Contact /></Window> : "")))}
       </div >
     </>
   )

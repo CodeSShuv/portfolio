@@ -1,13 +1,8 @@
-
 import { useState, useRef } from "react";
 import "./css/window.css";
 const Window = ({ title, children, closeWindow }) => {
-
-
   return (
-
     <>
-
       <div className="window" >
         <div className="title-panel">
           <div className="window-btns">

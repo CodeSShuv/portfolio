@@ -31,6 +31,10 @@
   color: #00AA00
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 body,
 * {
   background-color: #272822;

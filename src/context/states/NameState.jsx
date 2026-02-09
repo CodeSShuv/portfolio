@@ -1,5 +1,4 @@
 import { useState } from "react";
-import React from 'react'
 import visitorNameContext from "../nameContext";
 const NameState = ({ children }) => {
   const [visitorName, setVisitorName] = useState(() => null);

@@ -21,7 +21,8 @@ const About = () => {
           <p><span className='line'>$</span><span className='keyword'>cat</span>
             bio.txt </p>
           <ul className=''>
-            <li><span className='hints'>Installed on:</span> 2004/11/11</li>
+            <li><span className='hints'>Name:</span> Shuvam Gautam</li>
+            <li><span className='hints'>Installed on:</span> 2004/11/11 A.D</li>
             <li><span className='hints'>Location:</span> Based in Nepal. Serving the world via WiFi.  </
             li>
             <li> <span className='hints'>Education: </span> BCA Student. Surviving on instant noodles and debugging sessions. </

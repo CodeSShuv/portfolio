@@ -27,15 +27,11 @@ const Skill = () => {
 
         <div className='skill-container'>
           <div>
-
             <p><span className='line'>$</span>
               <span className='keyword'>Languages: </span></p>
             <div className="logo-container">
-              {/* js */}
               <img src={jsImage} alt="" />
               <img src={pyImage} alt="" />
-              {/* <img src="" alt="" />
-              <img src="" alt="" /> */}
             </div>
           </div>
 
