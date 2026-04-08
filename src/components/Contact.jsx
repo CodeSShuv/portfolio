@@ -7,13 +7,15 @@ const Contact = () => {
       <div>
 
         <div className='greeting'>
-
-          <p><span className='line'>$</span>
+          <p>
+            <span className='line'>$</span>
             <span className='visitor-name'>{visitorName},</span>
-            The difference between her and you? Well… you pressed ‘Contact.’.</p>
-          <p><span className='line'>$</span>
-
-            Poor her… missing out. Lucky you, though.</p>
+            Thank you for taking the time to reach out.
+          </p>
+          <p>
+            <span className='line'>$</span>
+            I appreciate your interest and look forward to connecting with you.
+          </p>
         </div>
         <div>
           <p><span className='line'>$</span>

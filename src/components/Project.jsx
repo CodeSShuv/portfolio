@@ -51,10 +51,16 @@ const Project = () => {
           <li>
             <span className='hints'>Description:</span>
             <span>
-
-              <p> Anonymous Confession was created during the early days of 1st semester and I had recently learned react and wanted to build a project. This was supposed to be the official confession page for our class or college,But couldn't succeed :(. <br /><br /><span className='visitor-name'>{visitorName}</span>, will you be my valentine?  </p>
-              <p>You can write such confession.
-                <br /> Btw why did you say yes?</p>
+              <p>
+                This project, "Anonymous Confession," was developed during my first semester as part of my early learning in React. It was intended to serve as a platform for students to share messages within a class or college environment. Although it was not fully implemented as originally envisioned, it reflects my initiative to apply newly acquired skills in a practical project.
+                <br /><br />
+                <span className='visitor-name'>{visitorName}</span>, thank you for taking the time to explore this work.
+              </p>
+              <p>
+                This platform demonstrates the concept of user-generated submissions in a simple and interactive format.
+                <br />
+                I would appreciate any feedback you may have.
+              </p>
             </span>
           </li>
           <li>
