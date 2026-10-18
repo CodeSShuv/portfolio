@@ -37,10 +37,12 @@ p {
 
 body,
 * {
-  background-color: #272822;
+  /* background-color: #272822; */
+  background-color:black;
   font-family: 'Fira Code', monospace;
   /* color: #F8F8F */
   cursor: crosshair;
+  cursor:default;
   overflow-x: hidden;
 }
 

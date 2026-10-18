@@ -1,31 +1,33 @@
-.custom-list {
-  list-style-type: none;
-  font-size: 1.3rem;
-  padding-left: 0;
 
-}
 
-.custom-list li {
-  position: relative;
-  padding-left: 2rem;
-  ;
-}
-
-.custom-list li::before {
-  content: "$ ";
+/* .custom-list li::before {
+  content: "codesshuv";
   color: #4F46E5;
-  font-weight: bold;
   margin-right: 8px;
   display: inline;
   position: absolute;
   left: 1rem;
   top: .2rem;
+} */
+ /* ul li{
+  display: inline-block;
+ } */
+  *{
+    font-size:  1.3rem
+  }
+.root-name{
+  color: rgb(52, 52, 165);
 }
-
+.directory-name{
+  color: rgb(190, 18, 47);
+}
+.main-command{
+  color: rgb(214, 214, 34);
+}
 input {
   background-color: #272822;
   width: 80rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: inline-block;
   border: none;
   outline: none;
