@@ -1,10 +1,122 @@
-.about-container {
-  height: 100vh;
-  padding: 2rem;
+
+.about {
+  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d4d4d8;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.greeting,
-.bio {
-  border-bottom: 1px solid gray;
-  padding: 1rem, 0, 1rem, 0;
+/* Header */
+.about-filename {
+  color: #34d399;
+  margin: 0 0 12px;
+}
+
+.about-name {
+  color: #f4f4f5;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.about-dot {
+  color: #34d399;
+}
+
+.about-role {
+  color: #34d399;
+  margin: 8px 0 0;
+}
+
+.about-separator {
+  color: #71717a;
+}
+
+/* Description */
+.about-description {
+  color: #a1a1aa;
+  line-height: 1.9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-description p {
+  margin: 0;
+}
+
+.about-white {
+  color: #e4e4e7;
+}
+
+.about-green {
+  color: #6ee7b7;
+}
+
+.about-blue {
+  color: #38bdf8;
+}
+
+.about-yellow {
+  color: #fcd34d;
+}
+
+/* Terminal-style details */
+.about-details {
+  border-left: 2px solid rgba(16, 185, 129, 0.4);
+  padding-left: 16px;
+}
+
+.about-details p {
+  margin: 0;
+}
+
+.about-comment {
+  color: #71717a;
+  margin-bottom: 8px !important;
+}
+
+.about-comment-symbol {
+  color: #10b981;
+}
+
+.about-key {
+  color: #38bdf8;
+}
+
+.about-equals {
+  color: #71717a;
+}
+
+.about-string {
+  color: #fcd34d;
+}
+
+/* Footer */
+.about-footer {
+  border-top: 1px solid #27272a;
+  padding-top: 16px;
+  margin: 0;
+  color: #71717a;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .about {
+    font-size: 12px;
+    gap: 20px;
+  }
+
+  .about-name {
+    font-size: 25px;
+  }
+
+  .about-description {
+    line-height: 1.8;
+  }
 }

@@ -1,18 +1,19 @@
-import React,{ use, useContext, useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import React,{ useEffect, useRef, useState } from 'react'
 // import visitorNameContext from '../context/nameContext'
 
 import "./css/landing.css"
 import TerminalInput from '../components/TerminalInput';
-
+import About from "../components/About"
+import Skills from '../components/Skill';
 
 const DEFAULT_KEYWORDS = {
   "cd" : "cd <component you want to view>",
   "ls"  : "list all the components.",
   "commands" : "view all necessary commands",
-  "pages" :"view all the necessary pages/components"
+  "pages" :"list all the necessary pages/components"
 }
 const DEFAULT_COMMANDS = Object.keys(DEFAULT_KEYWORDS);
+
 const Terminal = () => {
 
   const [commandDetail, setCommandDetail] = useState([]);
@@ -20,6 +21,15 @@ const Terminal = () => {
   const [command, setCommand] = useState("");
   const [lines , setLines ] = useState([]);
   const [msg, setMsg] = useState([]);
+  const terminalRef = useRef(null);
+
+  useEffect(() => {
+    const terminal = terminalRef.current;
+    if (terminal) {
+      terminal.scrollTop = terminal.scrollHeight;
+    }
+  }, [lines, msg]);
+
   useEffect(()=>{
     if (command.length === 0) return 
     let lineModel = {
@@ -38,6 +48,8 @@ const Terminal = () => {
         setDirectory("root");
       } else if (lineModel.text.toLowerCase() === "about") {
         setDirectory("about");
+      }else if (lineModel.text.toLowerCase() === "skill") {
+        setDirectory("skill");
       }
   }else if(lineModel.command === 'clear'){
     setCommand([])
@@ -51,7 +63,7 @@ const Terminal = () => {
   }, [command])
 
   return (
-    <div className='landing-page w-100'>
+    <div className='landing-page w-100' ref={terminalRef}>
       <ul className='custom-list'>
         {lines?.map((line, index) => {
  console.log(lines)
@@ -94,7 +106,8 @@ const Terminal = () => {
           </div>
         ) : line.command === "cd"? (
           <></>
-        ):""}
+        ):(directory === "about" && line.command === "show")?<About/>:directory === "skill" && line.command === "show" ? (<Skills></Skills>):<></>
+        }
       </li>
     </React.Fragment>
   );

@@ -15,6 +15,13 @@
   *{
     font-size:  1.3rem
   }
+.landing-page {
+  height: calc(100vh - 6rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .root-name{
   color: rgb(52, 52, 165);
 }
@@ -25,7 +32,7 @@
   color: rgb(214, 214, 34);
 }
 input {
-  background-color: #272822;
+  /* background-color: #272822; */
   width: 80rem;
   font-size: 1rem;
   display: inline-block;

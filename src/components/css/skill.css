@@ -1,15 +1,102 @@
-.logo-container {
+
+.skills {
+  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d4d4d8;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.logo-container img {
-  width: 10%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+/* Header */
+.skills-filename {
+  color: #34d399;
+  margin: 0 0 12px;
 }
 
-.skills-container>div {
-  border-bottom: 1px solid gray;
-  padding: 1rem, 0, 1rem, 0;
+.skills-title {
+  color: #f4f4f5;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.skills-dot {
+  color: #34d399;
+}
+
+.skills-subtitle {
+  color: #a1a1aa;
+  margin: 8px 0 0;
+}
+
+/* JSON-style content */
+.skills-code {
+  border-left: 2px solid rgba(16, 185, 129, 0.4);
+  padding-left: 16px;
+  overflow-wrap: anywhere;
+}
+
+.skills-bracket {
+  color: #71717a;
+  margin: 0;
+}
+
+.skills-group {
+  margin: 10px 0;
+}
+
+.skills-group-title,
+.skills-closing {
+  margin: 0;
+}
+
+.skills-key {
+  color: #38bdf8;
+}
+
+.skills-punctuation {
+  color: #71717a;
+}
+
+.skills-list {
+  padding-left: 24px;
+}
+
+.skills-item {
+  margin: 2px 0;
+}
+
+.skills-string {
+  color: #fcd34d;
+}
+
+.skills-footer {
+  border-top: 1px solid #27272a;
+  padding-top: 16px;
+  margin: 0;
+  color: #71717a;
+}
+
+.skills-comment-symbol {
+  color: #10b981;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .skills {
+    font-size: 12px;
+    gap: 20px;
+  }
+
+  .skills-title {
+    font-size: 25px;
+  }
+
+  .skills-list {
+    padding-left: 16px;
+  }
 }

@@ -1,53 +1,75 @@
-import { useContext } from 'react'
-import visitorNameContext from '../context/nameContext'
-import "./css/about.css"
-const About = () => {
-  const { visitorName, setVisitorName } = useContext(visitorNameContext);
+
+import "./css/about.css";
+
+export default function About() {
   return (
-    <>
-      <div className="profile-picture-container">
-        <div className="img-container">
-          <img src="https://avatars.githubusercontent.com/u/144550157?v=4" alt="" />
-        </div>
+    <div className="about">
+      <div className="about-header">
+        <p className="about-filename"># profile.txt</p>
+
+        <h2 className="about-name">
+          Shuvam Gautam<span className="about-dot">.</span>
+        </h2>
+
+        <p className="about-role">
+          Self-taught Developer
+          <span className="about-separator"> · </span>
+          Nepal
+        </p>
       </div>
-      <div className="about-container">
-        <div className='greeting'>
 
-          <p><span className='line'>$</span><span className='keyword'>echo</span>
-            Hello <span className='visitor-name'>{visitorName}</span>, I always love those people who wants to know me. </p>
-        </div>
-        <div className='bio'>
+      <div className="about-description">
+        <p>
+          <span className="about-white">Hey!</span> I'm{" "}
+          <span className="about-green">Shuvam</span>, a developer
+          who enjoys turning ideas into working applications and
+          understanding how things work behind the scenes.
+        </p>
 
-          <p><span className='line'>$</span><span className='keyword'>cat</span>
-            bio.txt </p>
-          <ul className=''>
-            <li><span className='hints'>Name:</span> Shuvam Gautam</li>
-            <li><span className='hints'>Installed on:</span> 2004/11/11 A.D</li>
-            <li><span className='hints'>Location:</span> Based in Nepal. Serving the world via WiFi.  </
-            li>
-            <li> <span className='hints'>Education: </span> BCA Student. Surviving on instant noodles and debugging sessions. </
-            li>
-            <li><span className='hints'>Designation: </span>Fullstack Developer.</li>
-            <li><span className="hints">Stack: </span>
-              React | Node.js | MongoDB | Pure determination. </li>
-            <li><span className='hints'>Currently: </span> Debugging life and deploying projects 24/7.</li>
-            <li><span className="hints">Motto: </span>
-              If it compiles, it ships… eventually. </li>
-          </ul>
-          <div>
+        <p>
+          I believe in{" "}
+          <span className="about-blue">learning by building</span>,
+          solving real problems, and improving through
+          experimentation. I'm particularly interested in{" "}
+          <span className="about-yellow">backend engineering</span>{" "}
+          and how software systems are designed.
+        </p>
 
-            <span className="keyword">Available for hire</span>
-            Will code your dreams or my nightmares.
-          </div>
-
-        </div>
-        <div>
-          <p><span className='line'>$</span><span className='keyword'>echo</span>
-            Let's build something together. </p>
-        </div>
+        <p>
+          Currently focused on strengthening my development skills,
+          building practical projects, and{" "}
+          <span className="about-green">growing as an engineer</span>.
+        </p>
       </div>
-    </>
-  )
+
+      <div className="about-details">
+        <p className="about-comment">
+          <span className="about-comment-symbol">//</span> A little about me
+        </p>
+
+        <p>
+          <span className="about-key">location</span>
+          <span className="about-equals"> = </span>
+          <span className="about-string">"Nepal"</span>
+        </p>
+
+        <p>
+          <span className="about-key">mindset</span>
+          <span className="about-equals"> = </span>
+          <span className="about-string">"Always learning"</span>
+        </p>
+
+        <p>
+          <span className="about-key">interests</span>
+          <span className="about-equals"> = </span>
+          <span className="about-string">"Building & exploring"</span>
+        </p>
+      </div>
+
+      <p className="about-footer">
+        <span className="about-comment-symbol">//</span>{" "}
+        More than code — a continuous learning journey.
+      </p>
+    </div>
+  );
 }
-
-export default About

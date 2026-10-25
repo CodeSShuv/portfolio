@@ -1,88 +1,77 @@
-import { useContext } from 'react'
-import visitorNameContext from '../context/nameContext'
-import "./css/skill.css"
-import jsImage from "../assets/img/js.png"
-import pyImage from "../assets/img/py.png"
-import reactImage from "../assets/react.svg"
-import htmlImage from "../assets/img/html.png"
-import cssImage from "../assets/img/css.png"
-import nodeImage from "../assets/img/node.png"
-import expressImage from "../assets/img/express.png"
-import mongodbImage from "../assets/img/mongodb.png"
-const Skill = () => {
-  const { visitorName, setVisitorName } = useContext(visitorNameContext);
+
+import "./css/skill.css";
+
+const skillGroups = [
+  {
+    title: "frontend",
+    skills: ["JavaScript", "React", "HTML5", "CSS3", "Tailwind CSS"],
+  },
+  {
+    title: "backend",
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication"],
+  },
+  {
+    title: "database",
+    skills: ["PostgreSQL", "MongoDB", "Prisma ORM"],
+  },
+  {
+    title: "tools",
+    skills: ["Git", "GitHub", "Postman", "Linux", "VS Code"],
+  },
+];
+
+export default function Skills() {
   return (
-    <>
-      <div>
+    <div className="skills">
+      <div className="skills-header">
+        <p className="skills-filename"># skills.json</p>
 
+        <h2 className="skills-title">
+          Technical Skills<span className="skills-dot">.</span>
+        </h2>
 
-
-        <div className='greeting'>
-
-          <p><span className='line'>$</span>
-            <span className='keyword'>Skills Loaded. </span></p>
-          <p><span className='line'>$</span><span className="visitor-name">{visitorName}</span>,These are the
-            Stuff I learned after Googling “why is this not working?” at 3 AM.</p>
-        </div>
-
-        <div className='skill-container'>
-          <div>
-            <p><span className='line'>$</span>
-              <span className='keyword'>Languages: </span></p>
-            <div className="logo-container">
-              <img src={jsImage} alt="" />
-              <img src={pyImage} alt="" />
-            </div>
-          </div>
-
-          <div>
-
-            <p><span className='line'>$</span>
-              <span className='keyword'>Front End: </span></p>
-            <div className="logo-container">
-              {/* js */}
-
-              <img src={reactImage} alt="" />
-              {/* <img src={jsImage} alt="" /> */}
-              <img src={htmlImage} alt="" />
-              <img src={cssImage} alt="" />
-            </div>
-          </div>
-
-          <div>
-
-            <p><span className='line'>$</span>
-              <span className='keyword'>Backend: </span></p>
-            <div className="logo-container">
-              {/* js */}
-              <img src={nodeImage} alt="" />
-              <img src={expressImage} alt="" />
-              {/* <img src="" alt="" />
-              <img src="" alt="" /> */}
-            </div>
-          </div>
-
-          <div>
-
-            <p><span className='line'>$</span>
-              <span className='keyword'>Database: </span></p>
-            <div className="logo-container">
-              {/* js */}
-              <img src={mongodbImage} alt="" />
-
-            </div>
-          </div>
-
-
-
-        </div>
-
-        <div className='greeting'>
-          <p><span className='line'>$</span><span className='keyword'>Honestly,</span>Not magic. Just a lot of practice, mistakes, and refusing to give up.</p>
-        </div>
+        <p className="skills-subtitle">
+          Technologies I use to build and understand software.
+        </p>
       </div>
-    </>
-  )
-}
 
-export default Skill
+      <div className="skills-code">
+        <p className="skills-bracket">&#123;</p>
+
+        {skillGroups.map((group, index) => (
+          <div className="skills-group" key={group.title}>
+            <p className="skills-group-title">
+              <span className="skills-key">"{group.title}"</span>
+              <span className="skills-punctuation">: [</span>
+            </p>
+
+            <div className="skills-list">
+              {group.skills.map((skill, skillIndex) => (
+                <p className="skills-item" key={skill}>
+                  <span className="skills-string">"{skill}"</span>
+                  {skillIndex < group.skills.length - 1 && (
+                    <span className="skills-punctuation">,</span>
+                  )}
+                </p>
+              ))}
+            </div>
+
+            <p className="skills-closing">
+              <span className="skills-punctuation">]</span>
+              {index < skillGroups.length - 1 && (
+                <span className="skills-punctuation">,</span>
+              )}
+            </p>
+          </div>
+        ))}
+
+        <p className="skills-bracket">&#125;</p>
+      </div>
+
+      <p className="skills-footer">
+        <span className="skills-comment-symbol">//</span>{" "}
+        Always learning. Always building.
+      </p>
+    </div>
+  );
+}
