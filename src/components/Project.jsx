@@ -1,105 +1,122 @@
-import { useContext } from 'react'
-import visitorNameContext from '../context/nameContext'
-import "./css/project.css"
-const Project = () => {
-  const { visitorName, setVisitorName } = useContext(visitorNameContext);
-  return (<>
-    <div className='project'>
 
-      <div className='greeting'>
+import "./css/project.css";
 
-        <p><span className='line'>$</span>
-          <span className='visitor-name'>{visitorName},</span>
-          These are the fully functional projects created by turning bugs into features and Stack Overflow into a personality.</p>
+const projects = [
+  {
+    name: "Issue Management API",
+    directory: "issue-management-api",
+    description:
+      "A backend API for managing tickets, users, departments, and replies.",
+    tech: ["Node.js", "Express.js", "PostgreSQL", "Prisma"],
+    status: "In Development",
+    github: "https://github.com/CodeSShuv/issue-tracking-api",
+    demo: null,
+  },
+  {
+    name: "Developer Portfolio",
+    directory: "developer-portfolio",
+    description:
+      "A terminal-inspired portfolio to showcase my skills and projects.",
+    tech: ["React", "JavaScript", "CSS"],
+    status: "In Development",
+    github: null,
+    demo: null,
+  },
+];
+
+function ProjectCard({ project, index }) {
+  return (
+    <article className="project-card">
+      <div className="project-card-header">
+        <span className="project-index">0{index + 1}</span>
+        <h3 className="project-name">{project.name}</h3>
+        <span className="project-status">{project.status}</span>
       </div>
 
-      <div className='project-container'>
-        <h3><span className='line'>$</span>
-          <span className='keyword'>cat</span>
-          Chat Room.txt
-        </h3>
-        <ul>
-          <li><span className='hints'>Url:</span>
-            <a href="https://web-socket-75x3.onrender.com/" target='_blank'>Click Here</a></li>
-          <li>
-            <span className='hints'>Description:</span>
-            <span>
+      <p className="project-directory">
+        <span className="project-muted">directory: </span>
+        <span className="project-blue">{project.directory}</span>
+      </p>
 
-              <p>Chat Room was created just for learning process. It wasn't developed for the purpose of project building.I was trying to learn web socket(socket.io) and decided to learn by building, more features are yet to be published. Currently, a user can annonymously chat with individual or a group of individuals.</p>
-            </span>
-          </li>
-          <li>
-            <span className='hints'>Future Update:</span>
-            <span>
-              <ul>
-                <li>Will be adding more features like creating and joining rooms</li>
-                <li>Omegal like web app for chatting with an individual and moving to next when satisfied.</li>
-              </ul>
-            </span>
-          </li>
+      <p className="project-description">{project.description}</p>
 
-        </ul>
+      <div className="project-tech">
+        {project.tech.map((technology) => (
+          <span className="project-tech-tag" key={technology}>
+            {technology}
+          </span>
+        ))}
       </div>
-      <div className='project-container'>
-        <h3><span className='line'>$</span>
-          <span className='keyword'>cat</span>
-          Anonymous Confession.txt
-        </h3>
-        <ul>
-          <li><span className='hints'>Url:</span>
-            <a href="https://anonymousconfession.netlify.app/" target='_blank'>Click Here</a></li>
-          <li>
-            <span className='hints'>Description:</span>
-            <span>
-              <p>
-                This project, "Anonymous Confession," was developed during my first semester as part of my early learning in React. It was intended to serve as a platform for students to share messages within a class or college environment. Although it was not fully implemented as originally envisioned, it reflects my initiative to apply newly acquired skills in a practical project.
-                <br /><br />
-                <span className='visitor-name'>{visitorName}</span>, thank you for taking the time to explore this work.
-              </p>
-              <p>
-                This platform demonstrates the concept of user-generated submissions in a simple and interactive format.
-                <br />
-                I would appreciate any feedback you may have.
-              </p>
-            </span>
-          </li>
-          <li>
-            <span className='hints'>Tech Used:</span>
-            <span>
 
-              <p> React | Firebase</p>
-            </span>
-          </li>
-        </ul>
+      <div className="project-links">
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            <span aria-hidden="true">↗</span> GitHub
+          </a>
+        )}
+
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            <span aria-hidden="true">↗</span> Live Demo
+          </a>
+        )}
+
+        {!project.github && !project.demo && (
+          <span className="project-muted">Links coming soon</span>
+        )}
       </div>
-      <div className="project-container">
-        <h3><span className='line'>$</span>
-          <span className='keyword'>cat</span>
-          Complaint Management System.txt
-        </h3>
-        <ul>
-          <li><span className='hints'>Url:</span>
-            Not yet Hosted.</li>
-          <li>
-            <span className='hints'>Description:</span>
-            <span>
-
-              <p> This is the full stack project that i am Currently developing.This projects helps to efficiently manage and provide transparency regarding actions taken.This projects aims to provide a solutions for handling complain for the colleges and school. <br />
-                <span className='visitor-name'>{visitorName}</span>, I am planning to give this project to my college along with few complains.   </p>
-            </span>
-          </li>
-          <li>
-            <span className='hints'>Tech Used:</span>
-            <span>
-
-              <p> React | Nodejs | Expressjs | Mongodb | Mongoose</p>
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </>
-  )
+    </article>
+  );
 }
 
-export default Project
+export default function Projects() {
+  return (
+    <div className="projects">
+      <header className="projects-header">
+        <p className="projects-filename"># projects.json</p>
+
+        <h2 className="projects-title">
+          My Projects<span className="projects-dot">.</span>
+        </h2>
+
+        <p className="projects-subtitle">
+          Things I've built while learning, experimenting, and solving problems.
+        </p>
+      </header>
+
+      <div className="projects-summary">
+        <span className="projects-comment">// project directory</span>
+        <p>
+          <span className="project-blue">total_projects</span>
+          <span className="project-muted"> = </span>
+          <span className="project-yellow">{projects.length}</span>
+        </p>
+      </div>
+
+      <div className="projects-list">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.directory}
+            project={project}
+            index={index}
+          />
+        ))}
+      </div>
+
+      <p className="projects-footer">
+        <span className="projects-comment-symbol">//</span>{" "}
+        Every project is another step forward.
+      </p>
+    </div>
+  );
+}

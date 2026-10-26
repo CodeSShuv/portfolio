@@ -6,6 +6,7 @@ import TerminalInput from '../components/TerminalInput';
 import About from "../components/About"
 import Skills from '../components/Skill';
 
+import Projects from '../components/Project';
 const DEFAULT_KEYWORDS = {
   "cd" : "cd <component you want to view>",
   "ls"  : "list all the components.",
@@ -50,6 +51,9 @@ const Terminal = () => {
         setDirectory("about");
       }else if (lineModel.text.toLowerCase() === "skill") {
         setDirectory("skill");
+      }
+      else if (lineModel.text.toLowerCase() === "project") {
+        setDirectory("project");
       }
   }else if(lineModel.command === 'clear'){
     setCommand([])
@@ -106,7 +110,7 @@ const Terminal = () => {
           </div>
         ) : line.command === "cd"? (
           <></>
-        ):(directory === "about" && line.command === "show")?<About/>:directory === "skill" && line.command === "show" ? (<Skills></Skills>):<></>
+        ):(directory === "about" && line.command === "show")?<About/>:directory === "skill" && line.command === "show" ? (<Skills></Skills>):(directory === "project" && line.command === "show"? (<Projects/>): <></>)
         }
       </li>
     </React.Fragment>

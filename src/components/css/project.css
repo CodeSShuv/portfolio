@@ -1,3 +1,187 @@
-.project-container {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+
+.projects {
+  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d4d4d8;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.projects-filename {
+  color: #34d399;
+  margin: 0 0 12px;
+}
+
+.projects-title {
+  color: #f4f4f5;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.projects-dot {
+  color: #34d399;
+}
+
+.projects-subtitle {
+  color: #a1a1aa;
+  margin: 8px 0 0;
+}
+
+/* Summary */
+.projects-summary {
+  border-left: 2px solid rgba(16, 185, 129, 0.4);
+  padding-left: 16px;
+}
+
+.projects-summary p {
+  margin: 4px 0 0;
+}
+
+.projects-comment,
+.projects-comment-symbol {
+  color: #10b981;
+}
+
+.project-blue {
+  color: #38bdf8;
+}
+
+.project-yellow {
+  color: #fcd34d;
+}
+
+.project-muted {
+  color: #71717a;
+}
+
+/* Project list */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card {
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(24, 24, 27, 0.45);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.project-card:hover {
+  border-color: rgba(52, 211, 153, 0.45);
+  background: rgba(24, 24, 27, 0.8);
+}
+
+/* Project heading */
+.project-card-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-index {
+  color: #10b981;
+  font-size: 12px;
+}
+
+.project-name {
+  color: #f4f4f5;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.project-status {
+  color: #fcd34d;
+  border: 1px solid rgba(252, 211, 77, 0.25);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+/* Project details */
+.project-directory {
+  margin: 12px 0 4px;
+  overflow-wrap: anywhere;
+}
+
+.project-description {
+  color: #a1a1aa;
+  margin: 8px 0 14px;
+}
+
+/* Technology tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tech-tag {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid #27272a;
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.project-link {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.project-link:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* Footer */
+.projects-footer {
+  border-top: 1px solid #27272a;
+  padding-top: 16px;
+  margin: 0;
+  color: #71717a;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .projects {
+    font-size: 12px;
+    gap: 20px;
+  }
+
+  .projects-title {
+    font-size: 25px;
+  }
+
+  .project-card {
+    padding: 14px;
+  }
+
+  .project-name {
+    font-size: 14px;
+  }
 }
