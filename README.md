@@ -11,7 +11,7 @@
 
 ## 🌐 Live Demo
 
-**[https://codesshuv.github.io/portfolio](https://codesshuv.github.io/portfolio)**
+**[https://shuvamgt.github.io/portfolio](https://shuvamgt.github.io/portfolio)**
 
 ---
 
@@ -52,7 +52,7 @@ Each section behaves like a directory or file within a terminal environment.
 
 ```bash
 # Clone the repository
-git clone https://github.com/CodeSShuv/portfolio.git
+git clone https://github.com/shuvamgt/portfolio.git
 cd portfolio
 
 # Install dependencies
@@ -319,7 +319,7 @@ npm run lint
 
 **Shuvam Gautam**
 
-- GitHub: [@CodeSShuv](https://github.com/CodeSShuv)
+- GitHub: [@shuvamgt](https://github.com/shuvamgt)
 - LinkedIn: [Shuvam Gautam](https://www.linkedin.com/in/shuvam-gautam-b88871263/)
 - Email: [codesshuv@gmail.com](mailto:codesshuv@gmail.com)
 
